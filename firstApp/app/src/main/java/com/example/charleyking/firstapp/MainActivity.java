@@ -25,19 +25,11 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private EditText editText;
     private ImageView imageView;
-    private String[] data = {"apple", "pear", "banana", "orange", "watermalon", "peach", "grape",
-            "cherry", "mango", "1", "2", "3", "4", "5",};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.android_layout);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                MainActivity.this, android.R.layout.simple_list_item_1, data);
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        listView.setAdapter(adapter);
-
         Button button1 = (Button) findViewById(R.id.button_1);
         Button button2 = (Button) findViewById(R.id.button_2);
         editText = (EditText) findViewById(R.id.edit_text);
@@ -52,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
 
     }
 
